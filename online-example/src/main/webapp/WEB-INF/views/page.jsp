@@ -21,7 +21,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>${userClickhome}</title>
+<title>${title}</title>
 <script>
 	window.menu = '${title}'
 </script>
@@ -60,9 +60,12 @@
 			<c:if test="${userClickcontact == true}">
 				<%@include file="./contact.jsp"%>
 			</c:if>
+			<c:if test="${userClickshow == true or userClickproduct == true}">
+				<%@include file="./allproducts.jsp"%>
+			</c:if>
 		</div>
-		
-		
+
+
 		<!-- - footer content -->
 		<%@include file="./shared/footer.jsp"%>
 		<!-- /.container -->
