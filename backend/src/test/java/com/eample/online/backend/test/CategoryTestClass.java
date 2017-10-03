@@ -48,16 +48,41 @@ public class CategoryTestClass {
 	 * 
 	 * assertEquals("Successfull",true, categoryDao.update(cat1)); }
 	 */
-	/*@Test
-	public void testDeletecategory() {
+	/*
+	 * @Test public void testDeletecategory() {
+	 * 
+	 * cat1 = categoryDao.getid(1);
+	 * assertEquals("Successfull",true,categoryDao.delete(cat1)); }
+	 */
+
+	/*
+	 * @Test public void testListcategory() {
+	 * 
+	 * assertEquals("Successfull",1,categoryDao.list().size()); }
+	 */
+	@Test
+	public void testCrudcategory() {
+
+		cat1 = new Category();
+		cat1.setName("Abhilash");
+		cat1.setDescription("sample");
+		cat1.setUrl("category.img");
+		assertEquals("Succesfulll", true, categoryDao.add(cat1));
+
+		cat1 = new Category();
+		cat1.setName("Abhi");
+		cat1.setDescription("sample");
+		cat1.setUrl("category.img");
+		assertEquals("Succesfulll", true, categoryDao.add(cat1));
+
+		cat1 = categoryDao.getid(2);
+		cat1.setName("TV");
+		assertEquals("Successfull", true, categoryDao.update(cat1));
 
 		cat1 = categoryDao.getid(1);
-		assertEquals("Successfull",true,categoryDao.delete(cat1));
-	}*/
-	@Test
-	public void testListcategory() {
-
-				assertEquals("Successfull",1,categoryDao.list().size());
+		assertEquals("Successfull", true, categoryDao.delete(cat1));
+		
+		assertEquals("Successfull",1,categoryDao.list().size());
 	}
-	
+
 }
