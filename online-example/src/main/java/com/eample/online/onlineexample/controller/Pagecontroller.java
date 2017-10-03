@@ -16,8 +16,7 @@ public class Pagecontroller {
 		@Autowired
 		private CategoryDao category;
 		
-		
-		@RequestMapping(value = {"/*","/home","/index"})
+		@RequestMapping(value = {"/","/home","/index"})
 		public ModelAndView index(){
 			ModelAndView mv = new ModelAndView("page");
 			mv.addObject("title","home");
@@ -70,7 +69,7 @@ public class Pagecontroller {
 			cat=category.getid(id);
 			
 			//ModelAndView mv = new ModelAndView("page");
-			mv.addObject("title","showsingleprodcut");
+			mv.addObject("title",cat.getName());
 			mv.addObject("userClickproduct","true");
 			mv.addObject("category1",cat);
 			mv.addObject("category",category.list());

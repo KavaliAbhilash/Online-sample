@@ -6,6 +6,12 @@
 			<%@include file="./shared/category.jsp"%>
 		</div>
 
+
+
+
+
+
+
 	</div>
 
 	<div class="row">
@@ -36,7 +42,23 @@
 	</div>
 
 
+	<div class="row">
 
+		<div class="col-xs-12">
+			<table id="ProductlistTable"
+				class="table table-striped table-bordered">
+
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+					</tr>
+				</thead>
+
+			</table>
+
+		</div>
+	</div>
 
 
 </div>
