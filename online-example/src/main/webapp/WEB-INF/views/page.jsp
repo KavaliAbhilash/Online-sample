@@ -23,16 +23,19 @@
 
 <title>${title}</title>
 <script>
-	window.menu = '${title}'
+	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}';
 </script>
 
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
+
+<link href="${css}/bootstrap.min.custom.css" rel="stylesheet">
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
-
-<!-- <link href="${css}/bootstrap.min.custom.css" rel="stylesheet">-->
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,27 +50,32 @@
 
 	<div class="Wrapper">
 
-		<!-- Navigation -->
-		<%@include file="./shared/navigation.jsp"%>
-		<div class="page_content">
-			<!-- Page Content -->
-			<c:if test="${userClickhome == true}">
-				<%@include file="./home.jsp"%>
-			</c:if>
-			<c:if test="${userClickabout == true}">
-				<%@include file="./about.jsp"%>
-			</c:if>
-			<c:if test="${userClickcontact == true}">
-				<%@include file="./contact.jsp"%>
-			</c:if>
-			<c:if test="${userClickshow == true or userClickproduct == true}">
-				<%@include file="./allproducts.jsp"%>
-			</c:if>
+			<!-- Navigation -->
+			<%@include file="./shared/navigation.jsp"%>
+
+			<div class="page_content">
+				<!-- Page Content -->
+				<c:if test="${userClickhome == true}">
+					<%@include file="./home.jsp"%>
+				</c:if>
+				<c:if test="${userClickabout == true}">
+					<%@include file="./about.jsp"%>
+				</c:if>
+				<c:if test="${userClickcontact == true}">
+					<%@include file="./contact.jsp"%>
+				</c:if>
+				<c:if test="${userClickshow == true or userClickproduct == true}">
+					<%@include file="./allproducts.jsp"%>
+				</c:if>
+			</div>
+
+
+
+			<!-- - footer content -->
+
+			<%@include file="./shared/footer.jsp"%>
+
 		</div>
-
-
-		<!-- - footer content -->
-		<%@include file="./shared/footer.jsp"%>
 		<!-- /.container -->
 
 		<!-- jQuery -->
@@ -77,11 +85,10 @@
 		<script src="${js}/bootstrap.min.js"></script>
 
 		<script src="${js}/jquery.dataTables.js"></script>
+		<script src="${js}/dataTables.bootstrap.js"></script>
 
 		<!-- Self custom jquery script -->
 		<script src="${js}/myapp.js"></script>
-
-	</div>
 
 </body>
 

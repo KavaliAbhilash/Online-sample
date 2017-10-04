@@ -8,10 +8,6 @@
 
 
 
-
-
-
-
 	</div>
 
 	<div class="row">
@@ -20,6 +16,9 @@
 
 
 			<c:if test="${userClickshow == true}">
+			<script>
+			window.categoryId='';
+			</script>
 
 				<ol class="breadcrumb">
 
@@ -30,6 +29,11 @@
 
 
 			<c:if test="${userClickproduct == true}">
+				<script>
+				window.categoryId= '${category1.id}';
+				
+				</script>
+				
 				<ol class="breadcrumb">
 
 					<li><a href="${contextRoot}/home">HOME</a></li>
@@ -50,10 +54,26 @@
 
 				<thead>
 					<tr>
-						<th>ID</th>
+						<th></th>
 						<th>Name</th>
+						<th>brand</th>
+						<th>price</th>
+						<th>quantity</th>
+						<th></th>
 					</tr>
 				</thead>
+				
+				<tfoot>
+					<tr>
+						<th></th>
+						<th>Name</th>
+						<th>brand</th>
+						<th>price</th>
+						<th>quantity</th>
+						<th></th>
+					</tr>
+					
+				</tfoot>
 
 			</table>
 
