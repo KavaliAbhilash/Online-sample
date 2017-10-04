@@ -67,6 +67,9 @@
 				<c:if test="${userClickshow == true or userClickproduct == true}">
 					<%@include file="./allproducts.jsp"%>
 				</c:if>
+				<c:if test="${userClickshowProduct == true}">
+					<%@include file="./showproduct.jsp"%>
+				</c:if>
 			</div>
 
 
