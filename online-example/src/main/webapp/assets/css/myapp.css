@@ -57,6 +57,9 @@ footer {
 	min-height:100%;
 	position:relative;
 }
+.help-block{
+	color: #ff0000;
+}
 
 .page_content{
 	padding-bottom:50px;

@@ -11,6 +11,9 @@ $(function() {
 	case 'showprodcuts':
 		$('#service').addClass('active');
 		break;
+	case 'ManageProducts':
+		$('#manageproducts').addClass('active');
+		break;
 	default:
 		if (menu == "home")
 			break;
